@@ -1,9 +1,9 @@
 import * as React from "react";
 import '/Users/eunseo-ko/ExploreX/frontend/src/App.css';
-import university1 from "../../image/university1.jpg";
-import university2 from "../../image/university2.jpg";
-import university3 from "../../image/university3.jpg";
-import university4 from "../../image/university4.jpg";
+import university1 from "../../images/university1.jpg";
+import university2 from "../../images/university2.jpg";
+import university3 from "../../images/university3.jpg";
+import university4 from "../../images/university4.jpg";
 
 
 const Top4Univ = () => {

@@ -1,6 +1,6 @@
 import * as React from "react";
 import '/Users/eunseo-ko/ExploreX/frontend/src/App.css';
-import exchangeProgram from "/Users/eunseo-ko/ExploreX/frontend/src/image/exchange-program.avif";
+import exchangeProgram from "/Users/eunseo-ko/ExploreX/frontend/src/images/exchange-program.avif";
 
 
 const MainContainer = () => {

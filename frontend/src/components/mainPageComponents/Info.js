@@ -1,6 +1,6 @@
 import * as React from "react";
 import '/Users/eunseo-ko/ExploreX/frontend/src/App.css';
-import ewhaLogoWhite from "/Users/eunseo-ko/ExploreX/frontend/src/image/ewha-logo-white.png";
+import ewhaLogoWhite from "/Users/eunseo-ko/ExploreX/frontend/src/images/ewha-logo-white.png";
 
 
 const Info = () => {

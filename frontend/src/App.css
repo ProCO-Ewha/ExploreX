@@ -60,14 +60,14 @@
   color: black;
   img-align: center;
   border-top: 3px solid #00462A;
-  background-image: url(/Users/eunseo-ko/ExploreX/frontend/src/image/ewha-womans-university.png);
+  background-image: url(/src/images/ewha-womans-university.png);
   background-repeat: no-repeat;
   background-position: center;
 }
 
 .context{
   padding-top: 10px;
-  background-image: url(/Users/eunseo-ko/ExploreX/frontend/src/image/bc.jpg);
+  background-image: url(/src/images/bc.jpg);
   background-repeat: no-repeat;
   background-position: center;
   background-size: cover;

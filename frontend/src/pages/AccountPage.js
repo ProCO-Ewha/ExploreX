@@ -1,6 +1,6 @@
 import * as React from "react";
 import "../styles/AccountPage.css";
-import ewhaWomansUniversity from "../image/ewha-womans-university.png";
+import ewhaWomansUniversity from "../images/ewha-womans-university.png";
 import Login from "../components/accountPageComponents/Login";
 import SignUp from "../components/accountPageComponents/SignUp";
 import Info from "../components/mainPageComponents/Info";
