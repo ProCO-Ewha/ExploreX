@@ -1,0 +1,48 @@
+/* ExchangeProgramInfo.css */
+
+.exchange-program-info {
+    margin: 20px;
+    font-family: font2;
+    font-size: 15px;
+}
+
+.exchange-program-info > div {
+    margin-bottom: 30px;
+    border: 1px solid #ccc;
+    padding: 20px;
+    border-radius: 5px;
+}
+
+.exchange-program-info h2 {
+    font-size: 1.5rem;
+    margin-bottom: 10px;
+}
+
+.exchange-program-info ul {
+    padding-left: 20px;
+}
+
+.exchange-program-info li {
+    margin-bottom: 10px;
+    line-height: 1.5;
+}
+
+.exchange-program-info li strong {
+    font-weight: bold;
+    margin-right: 5px;
+}
+
+.exchange-program-info li a {
+    color: #007bff;
+    text-decoration: none;
+}
+
+.exchange-program-info li a:hover {
+    text-decoration: underline;
+}
+
+.exchange-program-info .remarks {
+    margin-top: 20px;
+    font-style: italic;
+    color: #888;
+}
