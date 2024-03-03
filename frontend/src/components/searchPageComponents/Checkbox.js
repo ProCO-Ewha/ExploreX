@@ -12,7 +12,7 @@ const Checkbox = () => {
 
     const fetchData = async () => {
         try {
-            const response = await axios.post('http://example.com/api/search', checkboxState);
+            const response = await axios.post('http://localhost:8080/api/search', checkboxState);
             setSchoolList(response.data);
         } catch (error) {
             console.error('학교 데이터 요청 실패:', error);
