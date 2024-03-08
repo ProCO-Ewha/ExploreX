@@ -6,13 +6,24 @@ const Checkbox = () => {
         country: [],
         grade: [],
         language: [],
+        language2: [],
         dormitory: []
     });
     const [schoolList, setSchoolList] = useState([]);
 
+    useEffect(() => {
+        console.log(checkboxState);
+    }, [checkboxState]);
+
     const fetchData = async () => {
         try {
-            const response = await axios.post('http://localhost:8080/api/search', checkboxState);
+            const response = await axios.post('/search', {
+                country: checkboxState.country,
+                grade: checkboxState.grade,
+                language: checkboxState.language,
+                language2: checkboxState.language2,
+                dormitory: checkboxState.dormitory
+            });
             setSchoolList(response.data);
         } catch (error) {
             console.error('학교 데이터 요청 실패:', error);
@@ -20,10 +31,23 @@ const Checkbox = () => {
     };
 
     const handleCheckboxChange = (type, value, option) => {
-        setCheckboxState(prevState => ({
-            ...prevState,
-            [type]: value ? [...prevState[type], option] : prevState[type].filter(item => item !== option)
-        }));
+        setCheckboxState(prevState => {
+            let updatedState = { ...prevState };
+            if (value) {
+                // 값이 체크되었는지 여부 확인
+                if (!updatedState[type].includes(option)) {
+                    // 배열에 추가
+                    updatedState[type] = [...updatedState[type], option];
+                }
+            } else {
+                // 값이 체크 해제되었는지 여부 확인
+                if (updatedState[type].includes(option)) {
+                    // 배열에서 제거
+                    updatedState[type] = updatedState[type].filter(item => item !== option);
+                }
+            }
+            return updatedState;
+        });
     };
 
     const handleSubmit = () => {
@@ -86,6 +110,9 @@ const Checkbox = () => {
             '중어권',
             '핀란드어권'
         ],
+        language2: [
+            '영어권'
+        ],
         dormitory: [
             'An official score report from one of the following: i.',
             'Depending on Campus',
@@ -104,7 +131,6 @@ const Checkbox = () => {
         ]
     };
 
-
     return (
         <div className="context">
             <div className="checkbox-container">
@@ -113,7 +139,10 @@ const Checkbox = () => {
                     <label key={index}>
                         <input
                             type="checkbox"
-                            onChange={(e) => handleCheckboxChange('country', e.target.checked, option)}
+                            onChange={(e) => {
+                                handleCheckboxChange('country', e.target.checked, option);
+                                console.log('Country:', option, 'Checked:', e.target.checked);
+                            }}
                             value={option}
                         />
                         {option}
@@ -124,7 +153,10 @@ const Checkbox = () => {
                     <label key={index}>
                         <input
                             type="checkbox"
-                            onChange={(e) => handleCheckboxChange('grade', e.target.checked, option)}
+                            onChange={(e) => {
+                                handleCheckboxChange('grade', e.target.checked, option);
+                                console.log('Grade:', option, 'Checked:', e.target.checked);
+                            }}
                             value={option}
                         />
                         {option}
@@ -135,7 +167,24 @@ const Checkbox = () => {
                     <label key={index}>
                         <input
                             type="checkbox"
-                            onChange={(e) => handleCheckboxChange('language', e.target.checked, option)}
+                            onChange={(e) => {
+                                handleCheckboxChange('language', e.target.checked, option);
+                                console.log('Language:', option, 'Checked:', e.target.checked);
+                            }}
+                            value={option}
+                        />
+                        {option}
+                    </label>
+                ))}
+                <h2>Language2</h2>
+                {checkboxOptions.language2.map((option, index) => (
+                    <label key={index}>
+                        <input
+                            type="checkbox"
+                            onChange={(e) => {
+                                handleCheckboxChange('language2', e.target.checked, option);
+                                console.log('Language2:', option, 'Checked:', e.target.checked);
+                            }}
                             value={option}
                         />
                         {option}
@@ -146,7 +195,10 @@ const Checkbox = () => {
                     <label key={index}>
                         <input
                             type="checkbox"
-                            onChange={(e) => handleCheckboxChange('dormitory', e.target.checked, option)}
+                            onChange={(e) => {
+                                handleCheckboxChange('dormitory', e.target.checked, option);
+                                console.log('Dormitory:', option, 'Checked:', e.target.checked);
+                            }}
                             value={option}
                         />
                         {option}
@@ -154,15 +206,17 @@ const Checkbox = () => {
                 ))}
             </div>
 
-            <div>
-                <button onClick={handleSubmit}>Submit</button>
-                <h2>School List</h2>
-                <ul>
-                    {schoolList.map((school, index) => (
-                        <li key={index}>{school.name}</li>
-                    ))}
-                </ul>
-            </div>
+            <button onClick={handleSubmit}>Submit</button>
+
+            <h2>School List</h2>
+            <ul>
+                {schoolList.map((school, index) => (
+                    <li key={index}>
+                        <p>Name: {school.programName}</p>
+                    </li>
+                ))}
+            </ul>
+
         </div>
     );
 };
