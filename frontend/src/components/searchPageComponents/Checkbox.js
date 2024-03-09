@@ -3,13 +3,14 @@ import axios from 'axios';
 
 const Checkbox = () => {
     const [checkboxState, setCheckboxState] = useState({
-        country: [],
-        grade: [],
-        language: [],
-        language2: [],
-        dormitory: []
+        country: '',
+        grade: '',
+        language: '',
+        language2: '',
+        dormitory: ''
     });
     const [schoolList, setSchoolList] = useState([]);
+    const apiUrl = 'http://localhost:8080';
 
     useEffect(() => {
         console.log(checkboxState);
@@ -17,37 +18,18 @@ const Checkbox = () => {
 
     const fetchData = async () => {
         try {
-            const response = await axios.post('/search', {
-                country: checkboxState.country,
-                grade: checkboxState.grade,
-                language: checkboxState.language,
-                language2: checkboxState.language2,
-                dormitory: checkboxState.dormitory
-            });
+            const response = await axios.post(`${apiUrl}/search`, checkboxState);
             setSchoolList(response.data);
         } catch (error) {
             console.error('학교 데이터 요청 실패:', error);
         }
     };
 
-    const handleCheckboxChange = (type, value, option) => {
-        setCheckboxState(prevState => {
-            let updatedState = { ...prevState };
-            if (value) {
-                // 값이 체크되었는지 여부 확인
-                if (!updatedState[type].includes(option)) {
-                    // 배열에 추가
-                    updatedState[type] = [...updatedState[type], option];
-                }
-            } else {
-                // 값이 체크 해제되었는지 여부 확인
-                if (updatedState[type].includes(option)) {
-                    // 배열에서 제거
-                    updatedState[type] = updatedState[type].filter(item => item !== option);
-                }
-            }
-            return updatedState;
-        });
+    const handleCheckboxChange = (type, value) => {
+        setCheckboxState(prevState => ({
+            ...prevState,
+            [type]: value
+        }));
     };
 
     const handleSubmit = () => {
@@ -140,10 +122,10 @@ const Checkbox = () => {
                         <input
                             type="checkbox"
                             onChange={(e) => {
-                                handleCheckboxChange('country', e.target.checked, option);
+                                handleCheckboxChange('country', e.target.checked ? option : '');
                                 console.log('Country:', option, 'Checked:', e.target.checked);
                             }}
-                            value={option}
+                            checked={checkboxState.country === option}
                         />
                         {option}
                     </label>
@@ -154,10 +136,10 @@ const Checkbox = () => {
                         <input
                             type="checkbox"
                             onChange={(e) => {
-                                handleCheckboxChange('grade', e.target.checked, option);
+                                handleCheckboxChange('grade', e.target.checked ? option : '');
                                 console.log('Grade:', option, 'Checked:', e.target.checked);
                             }}
-                            value={option}
+                            checked={checkboxState.grade === option}
                         />
                         {option}
                     </label>
@@ -168,10 +150,10 @@ const Checkbox = () => {
                         <input
                             type="checkbox"
                             onChange={(e) => {
-                                handleCheckboxChange('language', e.target.checked, option);
+                                handleCheckboxChange('language', e.target.checked ? option : '');
                                 console.log('Language:', option, 'Checked:', e.target.checked);
                             }}
-                            value={option}
+                            checked={checkboxState.language === option}
                         />
                         {option}
                     </label>
@@ -182,10 +164,10 @@ const Checkbox = () => {
                         <input
                             type="checkbox"
                             onChange={(e) => {
-                                handleCheckboxChange('language2', e.target.checked, option);
+                                handleCheckboxChange('language2', e.target.checked ? option : '');
                                 console.log('Language2:', option, 'Checked:', e.target.checked);
                             }}
-                            value={option}
+                            checked={checkboxState.language2 === option}
                         />
                         {option}
                     </label>
@@ -196,10 +178,10 @@ const Checkbox = () => {
                         <input
                             type="checkbox"
                             onChange={(e) => {
-                                handleCheckboxChange('dormitory', e.target.checked, option);
+                                handleCheckboxChange('dormitory', e.target.checked ? option : '');
                                 console.log('Dormitory:', option, 'Checked:', e.target.checked);
                             }}
-                            value={option}
+                            checked={checkboxState.dormitory === option}
                         />
                         {option}
                     </label>
