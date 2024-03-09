@@ -4,6 +4,7 @@ import SearchPageEwhaGreenNav from "../components/searchPageComponents/SearchPag
 import Menu from "../components/mainPageComponents/Menu";
 import CheckboxToSchoolListConverter from "../components/searchPageComponents/CheckboxToSchoolListConverter";
 import Info from "../components/mainPageComponents/Info";
+import NewCheckbox from "../NewCheckbox";
 
 const SearchPage = () => {
 
@@ -16,7 +17,9 @@ const SearchPage = () => {
 
             <Menu/>
 
-            <CheckboxToSchoolListConverter/>
+            {/*<CheckboxToSchoolListConverter/>*/}
+
+            <NewCheckbox />
 
             <Info/>
 

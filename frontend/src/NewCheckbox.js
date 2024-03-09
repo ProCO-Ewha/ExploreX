@@ -1,4 +1,7 @@
 import React, { useState, useEffect } from 'react';
+import "/Users/eunseo-ko/ExploreX/frontend/src/styles/Search.css";
+
+
 import {
     universityNames, country, city, grade, language, language2, dormitory,
     websiteLinks, scheduleLinks, email, numFor1Semester, semesterStartDates, semesterEndDates, courseRestrictions
@@ -26,6 +29,7 @@ for (let i = 0; i < universityNames.length; i++) {
 }
 
 const NewCheckbox = () => {
+    const [searchInput, setSearchInput] = useState('');
     const [checkboxState, setCheckboxState] = useState({
         country: [], // 배열로 변경하여 여러 개의 항목 선택 가능하도록 함
         grade: [],
@@ -36,12 +40,16 @@ const NewCheckbox = () => {
     const [filteredSchoolList, setFilteredSchoolList] = useState(universities); // universities로 변경
 
     useEffect(() => {
-        filterSchools(); // 체크박스 상태가 변경될 때마다 필터링 수행
-    }, [checkboxState]);
+        filterSchools(); // 검색어나 체크박스 상태가 변경될 때마다 필터링 수행
+    }, [searchInput, checkboxState]);
 
     const filterSchools = () => {
         let filteredList = universities;
 
+        // 검색어에 해당하는 학교 필터링
+        filteredList = filteredList.filter(school => school.universityNames.toLowerCase().includes(searchInput.toLowerCase()));
+
+        // 체크박스에 따라 필터링
         Object.keys(checkboxState).forEach(key => {
             const values = checkboxState[key];
             if (values.length > 0) {
@@ -51,6 +59,7 @@ const NewCheckbox = () => {
 
         setFilteredSchoolList(filteredList);
     };
+
     const handleCheckboxChange = (type, value) => {
         setCheckboxState(prevState => ({
             ...prevState,
@@ -58,10 +67,14 @@ const NewCheckbox = () => {
         }));
     };
 
+    const handleSearchInputChange = (e) => {
+        setSearchInput(e.target.value);
+    };
 
     const handleSubmit = () => {
         filterSchools();
     };
+
 
 
     const checkboxOptions = {
@@ -149,6 +162,17 @@ const NewCheckbox = () => {
 
     return (
         <div className="context">
+
+            <div className="search-container">
+                <input
+                    type="text"
+                    placeholder="Search keywords"
+                    value={searchInput}
+                    onChange={handleSearchInputChange}
+                    style={{fontSize: "15px", width: "500px", fontFamily: "font2"}}
+                />
+            </div>
+
             <div className="checkbox-container">
                 <h2>Country</h2>
                 {checkboxOptions.country.map((option, index) => (
@@ -226,7 +250,8 @@ const NewCheckbox = () => {
                         <li key={index} style={{textAlign: "left"}}>
                             <p>
                                 {school.universityNames}
-                                <button onClick={() => handleToggleExpand(index)} style={{marginLeft: "10px"}}>더보기</button>
+                                <button onClick={() => handleToggleExpand(index)} style={{marginLeft: "10px"}}>더보기
+                                </button>
                                 {expandedIndex === index && (
                                     <div style={{backgroundColor: "lightgrey", margin: "5px"}}>
                                         <p>Country: {school.country}</p>
