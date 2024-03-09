@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 import "../../styles/Search.css";
 import Checkbox from '../../components/searchPageComponents/Checkbox';
+import NewCheckbox from "../../NewCheckbox";
 import SchoolList from '../resultPageComponents/SchoolList';
 import { FaSearch } from "react-icons/fa";
 import axios from 'axios';
@@ -49,7 +50,7 @@ const CheckboxToSchoolListConverter = () => {
             </div>
 
             <div className="context">
-                {displaySchoolList ? <SchoolList schoolList={schoolList} /> : <Checkbox />} {/* 학교 목록을 전달 */}
+                {displaySchoolList ? <SchoolList schoolList={schoolList} /> : <NewCheckbox />} {/* 학교 목록을 전달 */}
                 <br />
             </div>
 

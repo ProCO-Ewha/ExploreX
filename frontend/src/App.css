@@ -1,11 +1,11 @@
 @font-face {
   font-family: "font1";
-  src: url("/src/fonts/BebasNeue-Regular.ttf");
+  src: url("/Users/eunseo-ko/ExploreX/frontend/src/fonts/BebasNeue-Regular.ttf");
 }
 
 @font-face {
   font-family: "font2";
-  src: url("/src/fonts/RobotoCondensed-Thin.ttf");
+  src: url("/Users/eunseo-ko/ExploreX/frontend/src/fonts/NotoSansKR-Thin.ttf");
 }
 
 
