@@ -259,6 +259,7 @@ const NewCheckbox = () => {
                                             <li>City: {school.city}</li>
                                             <li>Minimum grade in EWHA: {school.grade}</li>
                                             <li>Language field: {school.language} {school.language2}</li>
+                                            <li>Dormitory: {school.dormitory}</li>
                                             <li>Website Links: {school.websiteLinks}</li>
                                             <li>Schedule Links: {school.scheduleLinks}</li>
                                             <li>Email: {school.email}</li>

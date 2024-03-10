@@ -1,6 +1,6 @@
 // import React, { useState, useEffect } from 'react';
 // import axios from 'axios';
-// import "../../styles/SchoolList.css";
+// import "../../styles/ResultPage.css";
 //
 // const SchoolList = ({ searchKeyword }) => {
 //     const [schools, setSchools] = useState([]);
