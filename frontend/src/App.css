@@ -60,14 +60,14 @@
   color: black;
   img-align: center;
   border-top: 3px solid #00462A;
-  background-image: url(/src/images/ewha-womans-university.png);
+  background-image: url(/Users/eunseo-ko/ExploreX/frontend/src/images/ewha-womans-university.png);
   background-repeat: no-repeat;
   background-position: center;
 }
 
 .context{
   padding-top: 10px;
-  background-image: url(/src/images/bc.jpg);
+  background-image: url(/Users/eunseo-ko/ExploreX/frontend/src/images/bc.jpg);
   background-repeat: no-repeat;
   background-position: center;
   background-size: cover;
@@ -75,77 +75,77 @@
   text-align: center;
 }
 
-.search{
-  background: #00462A;
-}
+/*.search{*/
+/*  background: #00462A;*/
+/*}*/
 
-.checkbox-container {
-  display: flex;
-  flex-direction: column;
-  margin-left: 345px;
-  margin-right: 346px;
-  margin-bottom: 100px;
-  margin-top: -10px;
-  background-color: white;
-  border: none;
-  padding: 10px;
-  font-size: 12px;
-  text-align: left;
-}
+/*.checkbox-container {*/
+/*  display: flex;*/
+/*  flex-direction: column;*/
+/*  margin-left: 345px;*/
+/*  margin-right: 346px;*/
+/*  margin-bottom: 100px;*/
+/*  margin-top: -10px;*/
+/*  background-color: white;*/
+/*  border: none;*/
+/*  padding: 10px;*/
+/*  font-size: 12px;*/
+/*  text-align: left;*/
+/*}*/
 
-.checkbox-item {
-  display: flex;
-  align-items: center;
-  padding: 5px;
-}
+/*.checkbox-item {*/
+/*  display: flex;*/
+/*  align-items: center;*/
+/*  padding: 5px;*/
+/*}*/
 
-.checkbox-container input[type="checkbox"] {
-  margin-bottom: 5px;
-}
+/*.checkbox-container input[type="checkbox"] {*/
+/*  margin-bottom: 5px;*/
+/*}*/
 
-.info {
-  font-family: font2;
-  display: flex;
-  text-align: left;
-  align-items: center;
-  background: #00462A;
-  width: 100%;
-  color: white;
-}
+/*.info {*/
+/*  font-family: font2;*/
+/*  display: flex;*/
+/*  text-align: left;*/
+/*  align-items: center;*/
+/*  background: #00462A;*/
+/*  width: 100%;*/
+/*  color: white;*/
+/*}*/
 
-.custom-button,
-.submit-button {
-  font-size: 15px;
-  font-family: font2;
-  font-weight: bold;
-  width: 110px;
-  padding: 5px 10px;
-  font-size: 14px;
-  cursor: pointer;
-  transition: background-color 0.3s ease;
-  margin-left: 10px; /* 수정된 부분 */
-  margin-top: 30px;
-  margin-bottom: 20px;
-  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.5);
-}
+/*.custom-button,*/
+/*.submit-button {*/
+/*  font-size: 15px;*/
+/*  font-family: font2;*/
+/*  font-weight: bold;*/
+/*  width: 110px;*/
+/*  padding: 5px 10px;*/
+/*  font-size: 14px;*/
+/*  cursor: pointer;*/
+/*  transition: background-color 0.3s ease;*/
+/*  margin-left: 10px;*/
+/*  margin-top: 30px;*/
+/*  margin-bottom: 20px;*/
+/*  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.5);*/
+/*}*/
 
-.custom-button {
-  background-color: white;
-  color: black;
-  border: none;
-}
+/*.custom-button {*/
+/*  background-color: white;*/
+/*  color: black;*/
+/*  border: none;*/
+/*}*/
 
-.custom-button:hover {
-  background-color: lightgray;
-}
+/*.custom-button:hover {*/
+/*  background-color: lightgray;*/
+/*}*/
 
-.submit-button {
-  background-color: #00462A;
-  color: white;
-}
+/*.submit-button {*/
+/*  background-color: #00462A;*/
+/*  color: white;*/
+/*}*/
 
-.submit-button:hover {
-  background-color: #002E1B;
-}
+/*.submit-button:hover {*/
+/*  background-color: #002E1B;*/
+/*}*/
 
 

@@ -1,8 +1,7 @@
 import React, { useState } from 'react';
-import '/Users/eunseo-ko/ExploreX/frontend/src/styles/SignUp.css';
+import '/Users/eunseo-ko/ExploreX/frontend/src/styles/AccountPage.css';
 
 const SignUp = () => {
-    // 회원가입에 필요한 상태 변수들
     const [username, setUsername] = useState('');
     const [password, setPassword] = useState('');
     const [confirmPassword, setConfirmPassword] = useState('');
@@ -10,15 +9,13 @@ const SignUp = () => {
     const [email, setEmail] = useState('');
     const [isSubmitted, setIsSubmitted] = useState(false);
 
-    // 회원가입 양식 제출 핸들러
     const handleSubmit = (e) => {
         e.preventDefault();
-        // 여기에 회원가입 로직을 추가하면 됩니다.
         setIsSubmitted(true);
     };
 
     return (
-        <div className="signup-form"> {/* CSS 클래스 추가 */}
+        <div className="signup-form">
             <h2>Create account</h2>
             <form onSubmit={handleSubmit}>
                 <div>

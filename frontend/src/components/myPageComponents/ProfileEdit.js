@@ -7,7 +7,6 @@ const ProfileEdit = () => {
 
     const handleSubmit = (e) => {
         e.preventDefault();
-        // 수정된 프로필을 서버에 전송하는 로직을 여기에 추가할 수 있습니다.
     }
 
     return (

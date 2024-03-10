@@ -1,0 +1,81 @@
+.search-container {
+    font-family: font2;
+    font-size: 15px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: #00462A;
+    padding: 10px;
+    margin: -10px;
+    margin-bottom: 10px;
+}
+
+.search{
+    background: #00462A;
+}
+
+
+
+.checkbox-container, .school-list {
+    font-family: font2;
+    font-size: 15px;
+    display: flex;
+    flex-direction: column;
+    background-color: white;
+    padding: 10px;
+    text-align: left;
+    width: 40%;
+}
+
+.school-details {
+    font-family: font2;
+    padding: 20px;
+    width: 500px;
+    border: none;
+    margin-top: 15px;
+    background-color: #ffffff;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease;
+}
+
+.school-details:hover {
+    transform: translateY(-5px);
+}
+
+.school-details:before {
+    content: '';
+    position: absolute;
+    top: -10px;
+    left: -10px;
+    right: -10px;
+    bottom: -10px;
+    background: linear-gradient(135deg, #ffffff, rgba(0, 70, 42, 0.23));
+    z-index: -1;
+    transition: opacity 0.3s ease;
+    opacity: 0;
+}
+
+.school-details:hover:before  {
+    opacity: 1;
+}
+
+.checkbox-item {
+    display: flex;
+    align-items: center;
+    padding: 5px;
+}
+
+.checkbox-container input[type="checkbox"] {
+    margin-bottom: 5px;
+}
+
+
+.info {
+    font-family: font2;
+    display: flex;
+    text-align: left;
+    align-items: center;
+    background: #00462A;
+    width: 100%;
+    color: white;
+}

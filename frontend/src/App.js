@@ -1,4 +1,4 @@
-import './App.css';
+import '/Users/eunseo-ko/ExploreX/frontend/src/App.css';
 import { BrowserRouter, Routes, Route} from "react-router-dom";
 import MainPage from './pages/MainPage.js';
 import AccountPage from './pages/AccountPage.js';

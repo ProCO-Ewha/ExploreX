@@ -5,13 +5,11 @@ import Menu from "../components/mainPageComponents/Menu";
 import Info from "../components/mainPageComponents/Info";
 import Top4Univ from "../components/mainPageComponents/Top4Univ";
 import MainContainer from "../components/mainPageComponents/MainContainer";
-import Test from "../components/testComponents/Test";
 
 const MainPage = () => {
 
     return (
         <div>
-            <Test/>
 
             <EwhaGreenNav/>
 

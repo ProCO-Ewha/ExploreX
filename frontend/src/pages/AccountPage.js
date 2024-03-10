@@ -1,5 +1,4 @@
 import * as React from "react";
-import "../styles/AccountPage.css";
 import ewhaWomansUniversity from "../images/ewha-womans-university.png";
 import Login from "../components/accountPageComponents/Login";
 import SignUp from "../components/accountPageComponents/SignUp";
@@ -21,7 +20,7 @@ function AccountPage() {
                 </a>
             </div>
 
-            <div style={{display: 'flex', justifyContent: 'space-between'}}>
+            <div style={{display: 'flex', justifyContent: 'space-evenly'}}>
                 <Login/>
                 <SignUp/>
             </div>

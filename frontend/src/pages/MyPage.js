@@ -4,6 +4,7 @@ import Settings from "../components/myPageComponents/Settings";
 import UserInfo from "../components/myPageComponents/UserInfo";
 import ProfileEdit from "../components/myPageComponents/ProfileEdit";
 import Info from "../components/mainPageComponents/Info";
+import Test from "../components/testComponents/Test";
 
 
 
@@ -14,12 +15,13 @@ const MyPage = () => {
 
             <MyPageEwhaGreenNav/>
 
+            <Test/>
+
             <Settings/>
 
             <UserInfo/>
 
             <ProfileEdit/>
-
 
             <Info/>
 

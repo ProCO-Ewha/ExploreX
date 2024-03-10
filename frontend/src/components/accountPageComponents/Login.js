@@ -1,15 +1,12 @@
 import React, { useState } from 'react';
-import "/Users/eunseo-ko/ExploreX/frontend/src/styles/Login.css";
+import '/Users/eunseo-ko/ExploreX/frontend/src/styles/AccountPage.css';
 const Login = () => {
-    // 로그인에 필요한 상태 변수들
     const [id, setId] = useState('');
     const [password, setPassword] = useState('');
     const [isSubmitted, setIsSubmitted] = useState(false);
 
-    // 로그인 양식 제출 핸들러
     const handleSubmit = (e) => {
         e.preventDefault();
-        // 여기에 로그인 로직을 추가하면 됩니다.
         setIsSubmitted(true);
     };
 

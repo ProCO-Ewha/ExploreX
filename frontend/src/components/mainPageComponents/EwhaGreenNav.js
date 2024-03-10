@@ -1,6 +1,6 @@
 import * as React from "react";
 import '/Users/eunseo-ko/ExploreX/frontend/src/styles/MyPage.css';
-import {Link} from "react-router-dom"; // CSS 파일 import
+import {Link} from "react-router-dom";
 
 const EwhaGreenNav = () => {
 

@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
 import axios from 'axios';
+import "/Users/eunseo-ko/ExploreX/frontend/src/styles/MyPage.css";
 
 function Test() {
     const [inputText, setInputText] = useState('');
@@ -20,17 +21,17 @@ function Test() {
     };
 
     return (
-        <div>
-            <h1>React - Spring Boot 통신 예제</h1>
+        <div className="test-container">
+            <h2>React - Spring Boot Communication Test</h2>
             <form onSubmit={handleSubmit}>
                 <label>
-                    입력:
+                    <h3>INPUT: </h3>
                     <input type="text" value={inputText} onChange={handleChange} />
                 </label>
-                <button type="submit">전송</button>
+                <button type="submit">SUBMIT</button>
             </form>
             <div>
-                <h2>결과:</h2>
+                <h3>ECHOED OUTPUT:</h3>
                 <p>{result}</p>
             </div>
         </div>

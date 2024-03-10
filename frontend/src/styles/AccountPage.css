@@ -1,0 +1,48 @@
+.login-form, .signup-form {
+    font-family: font2;
+    width: 400px;
+    padding: 20px;
+    border: none;
+    background-color: #fff;
+    box-shadow: 0 0 30px rgba(0, 0, 0, 0.1);
+}
+
+.login-form label, .signup-form label {
+    display: block;
+    margin-bottom: 5px;
+    font-weight: bold;
+}
+
+.login-form input[type="text"],
+.login-form input[type="email"],
+.login-form input[type="password"],
+.signup-form input[type="text"],
+.signup-form input[type="id"],
+.signup-form input[type="email"],
+.signup-form input[type="password"] {
+    width: calc(100% - 20px);
+    padding: 10px;
+    margin-bottom: 15px;
+    border: 1px solid #ccc;
+    border-radius: 3px;
+}
+
+.login-form button, .signup-form button {
+    width: 100%;
+    padding: 10px;
+    background-color: #00462A;
+    border: none;
+    border-radius: 3px;
+    color: white;
+    cursor: pointer;
+}
+
+.login-form button:hover, .signup-form button:hover {
+    background-color: #002E1B;
+}
+
+.login-form p, .signup-form p {
+    margin-top: 15px;
+    color: #00462A;
+    font-weight: bold;
+}

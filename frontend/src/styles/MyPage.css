@@ -1,118 +1,28 @@
-/* Settings 컴포넌트 */
-.settings-container {
+.settings-container, .user-info-container, .profile-edit-container, .test-container {
     padding: 20px;
     background-color: #ffffff;
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
     transition: transform 0.3s ease;
 }
 
-.settings-container:hover {
+.settings-container:hover, .user-info-container:hover, .profile-edit-container:hover, .test-container:hover {
     transform: translateY(-5px);
 }
 
-/* UserInfo 컴포넌트 */
-.user-info-container {
-    padding: 20px;
-    background-color: #ffffff;
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-    transition: transform 0.3s ease;
-}
-
-.user-info-container:hover {
-    transform: translateY(-5px);
-}
-
-/* ProfileEdit 컴포넌트 */
-.profile-edit-container {
-    padding: 20px;
-    background-color: #ffffff;
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-    transition: transform 0.3s ease;
-}
-
-.profile-edit-container:hover {
-    transform: translateY(-5px);
-}
-
-
-/* Settings 컴포넌트 */
-.settings-container {
-    padding: 20px;
-    background-color: #ffffff;
-    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1); /* 그림자 효과 강화 */
-    transition: transform 0.3s ease;
-    position: relative; /* 상대 위치 지정 */
-    overflow: hidden; /* 내용이 넘치는 경우를 대비하여 오버플로우 제어 */
-}
-
-.settings-container:before {
+.settings-container:before, .user-info-container:before, .profile-edit-container:before, .test-container:before {
     content: '';
     position: absolute;
     top: -10px;
     left: -10px;
     right: -10px;
     bottom: -10px;
-    background: linear-gradient(135deg, #cccccc, #00462A); /* 그라데이션 배경 */
-    z-index: -1; /* 배경을 뒤로 숨김 */
+    background: linear-gradient(135deg, #cccccc, #00462A);
+    z-index: -1;
     transition: opacity 0.3s ease;
-    opacity: 0; /* 기본적으로 투명하게 설정 */
+    opacity: 0;
 }
 
-.settings-container:hover:before {
-    opacity: 1; /* 호버 시 배경을 나타냄 */
-}
-
-/* UserInfo 컴포넌트 */
-.user-info-container {
-    padding: 20px;
-    background-color: #ffffff;
-    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1); /* 그림자 효과 강화 */
-    transition: transform 0.3s ease;
-    position: relative; /* 상대 위치 지정 */
-    overflow: hidden; /* 내용이 넘치는 경우를 대비하여 오버플로우 제어 */
-}
-
-.user-info-container:before {
-    content: '';
-    position: absolute;
-    top: -10px;
-    left: -10px;
-    right: -10px;
-    bottom: -10px;
-    background: linear-gradient(135deg, #cccccc, #00462A); /* 그라데이션 배경 */
-    z-index: -1; /* 배경을 뒤로 숨김 */
-    transition: opacity 0.3s ease;
-    opacity: 0; /* 기본적으로 투명하게 설정 */
-}
-
-.user-info-container:hover:before {
-    opacity: 1; /* 호버 시 배경을 나타냄 */
-}
-
-/* ProfileEdit 컴포넌트 */
-.profile-edit-container {
-    padding: 20px;
-    background-color: #ffffff;
-    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1); /* 그림자 효과 강화 */
-    transition: transform 0.3s ease;
-    position: relative; /* 상대 위치 지정 */
-    overflow: hidden; /* 내용이 넘치는 경우를 대비하여 오버플로우 제어 */
-}
-
-.profile-edit-container:before {
-    content: '';
-    position: absolute;
-    top: -10px;
-    left: -10px;
-    right: -10px;
-    bottom: -10px;
-    background: linear-gradient(135deg, #cccccc, #00462A); /* 그라데이션 배경 */
-    z-index: -1; /* 배경을 뒤로 숨김 */
-    transition: opacity 0.3s ease;
-    opacity: 0; /* 기본적으로 투명하게 설정 */
-}
-
-.profile-edit-container:hover:before {
-    opacity: 1; /* 호버 시 배경을 나타냄 */
+.settings-container:hover:before, .user-info-container:hover:before, .profile-edit-container:hover:before, .test-container:hover:before  {
+    opacity: 1;
 }
 
